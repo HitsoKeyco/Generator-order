@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 const Generator = ({ generateOrder, infoApi }) => {
-    const [numberRandm, setNumberRandm] = useState('0000');
-    const [copyMessage, setCopyMessage] = useState(null);
+    const [numberRandm, setNumberRandm] = useState('0000');    
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
 
     useEffect(() => {
@@ -18,15 +17,7 @@ const Generator = ({ generateOrder, infoApi }) => {
         });
     };
 
-    const handleCopyNumber = () => {
-        if (numberRandm) {
-            navigator.clipboard.writeText(numberRandm);
-            
-            setTimeout(() => {
-                Swal.fire('Numero Copiado');
-            }, 300);
-        }
-    };
+
     
 
     return (
@@ -38,9 +29,9 @@ const Generator = ({ generateOrder, infoApi }) => {
                     <input className="total_amount" type="text" {...register('monto', { required: true })}/>
 
                     <button type="submit">Generar</button>
-                    <label className="label_order" onTouchStart={handleCopyNumber}>{numberRandm}</label>
+                    <label className="label_order" >{numberRandm}</label>
                 </form>
-                {copyMessage && <p>{copyMessage}</p>}
+                
             </div>
         </>
     );
