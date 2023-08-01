@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { Toaster, toast } from "react-hot-toast";
+
 const Generator = ({ generateOrder, infoApi }) => {
     const [numberRandm, setNumberRandm] = useState('0000');    
     const { register, reset, handleSubmit, formState: { errors } } = useForm();
-
+    
     useEffect(() => {
         setNumberRandm(infoApi);
     }, [infoApi]);
@@ -29,7 +31,11 @@ const Generator = ({ generateOrder, infoApi }) => {
                     <input className="total_amount" type="text" {...register('monto', { required: true })}/>
 
                     <button type="submit">Generar</button>
-                    <label className="label_order" >{numberRandm}</label>
+                    <CopyToClipboard text={`Ingrese el N°${numberRandm} de Orden en el  siguiente link y posteriormente todos los datos para el respectivo envío. 
+                    https://datos-de-envio-everchic.netlify.app/`}>
+                    <label onClick={() => toast('Orden copiada ❤')} className="label_order" >{numberRandm}</label>
+                    </CopyToClipboard>
+                    <Toaster />
                 </form>
                 
             </div>
