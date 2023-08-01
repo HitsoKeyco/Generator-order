@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+
+* {
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2d9443;
+}
+
+.generator_container{
+    width: 100%vw;
+    height: 100vh;    
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    max-width: 500px;
+    
+    background-color: #2d9443;
+    padding: 20px;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+}
+
+Button {
+    width: 150px;
+    padding: 10px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2em;
+    background-color: rgb(62, 202, 93);
+    color: white;
+    cursor: pointer;
+}
+
+.label_order {
+    min-width: 150px ;
+    min-height: 50px;
+    border-radius: 10px;
+    color: green;    
+    background-color: rgba(255, 255, 255, 0.356);
+    font-size: 2em;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.input_total_amount{
+    font-size: 1em;
+    width: max-content;
+    height: max-content;
+    color: green;    
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+    position: relative;
+    top: 20px;
+    left: -25px;
+    background-color: white;
+}
+
+.total_amount{
+    width: 150px;
+    border-radius: 15px;
+    height: 50px;
+    border: none;
+    margin: 15px;
+    padding-left: 10px;
+    color: green;
+    font-size: 1.7em;
+}
