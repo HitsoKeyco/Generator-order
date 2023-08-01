@@ -17,6 +17,7 @@ body{
     
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -80,4 +81,11 @@ Button {
     padding-left: 10px;
     color: green;
     font-size: 1.7em;
+}
+
+.title_generator{
+    text-align: center;
+    font-size: 2em;
+    color: white;
+
 }
