@@ -31,8 +31,7 @@ const Generator = ({ generateOrder, infoApi }) => {
                     <input className="total_amount" type="text" {...register('monto', { required: true })}/>
 
                     <button type="submit">Generar</button>
-                    <CopyToClipboard text={`Ingrese el N°${numberRandm} de Orden en el  siguiente link y posteriormente todos los datos para el respectivo envío. 
-                    https://datos-de-envio-everchic.netlify.app/`}>
+                    <CopyToClipboard text={`Ingrese el N° de orden ${numberRandm}            En el  siguiente link y posteriormente todos los datos para el respectivo envío. https://datos-de-envio-everchic.netlify.app/`}>
                     <label onClick={() => toast('Orden copiada ❤')} className="label_order" >{numberRandm}</label>
                     </CopyToClipboard>
                     <Toaster />
